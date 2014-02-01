@@ -235,7 +235,7 @@ dd {
           color: #b58900;
           text-shadow: 0 0 3px #111111; }
       @media (max-width: 480px) {
-        .footer .footernav ul li.social {
+        .footer .footernav ul li.nav-social {
           display: none; } }
 
 .wrapper {
