@@ -8,12 +8,15 @@ code {
   padding: 5px 15px;
   text-shadow: 0 -1px #222222;
   margin: 15px 0;
+  overflow: auto;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: inset 0 0 5px #111111;
   -moz-box-shadow: inset 0 0 5px #111111;
   box-shadow: inset 0 0 5px #111111; }
+  .highlight pre {
+    white-space: pre; }
 
 .header {
   color: #93a1a1;
@@ -118,6 +121,12 @@ dd {
   @media (max-width: 640px) {
     .content {
       padding: 20px 15px 15px; } }
+  @media (max-width: 480px) {
+    .content .no-small {
+      display: none; } }
+  @media (max-width: 640px) {
+    .content .no-mobile {
+      display: none; } }
   .content img {
     -webkit-box-shadow: 0 0 10px 1px #111111;
     -moz-box-shadow: 0 0 10px 1px #111111;
@@ -146,6 +155,9 @@ dd {
   padding: 0 0 15px;
   margin-bottom: 15px;
   text-align: justify; }
+  @media (max-width: 480px) {
+    .page-content, .post {
+      text-align: left; } }
 
 .post {
   border-bottom: 1px solid #073642; }
@@ -222,6 +234,9 @@ dd {
         .footer .footernav ul li a:active {
           color: #b58900;
           text-shadow: 0 0 3px #111111; }
+      @media (max-width: 480px) {
+        .footer .footernav ul li.social {
+          display: none; } }
 
 .wrapper {
   min-height: 100%;
