@@ -136,13 +136,13 @@ dd {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px; }
-    .content img .img-right {
+    .content img.img-right {
       float: right;
       margin: 0 0 10px 20px; }
-    .content img .img-left {
+    .content img.img-left {
       float: left;
       margin: 0 20px 10px 0; }
-    .content img .img-center {
+    .content img.img-center {
       display: block;
       margin-right: auto;
       margin-left: auto; }
