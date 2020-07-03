@@ -28,10 +28,6 @@
       href="https://fonts.googleapis.com/css?family=Karla&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fontlibrary.org/face/dejavu-sans-mono"
-      rel="stylesheet"
-    />
 
     <style>
       :root {
@@ -45,7 +41,7 @@
         --selection-color: #268bd2;
         --body-font: Karla, sans-serif;
         --heading-font: 'Open Sans Condensed', sans-serif;
-        --monospace-font: 'DejaVu Sans Mono', monospace;
+        --monospace-font: monospace;
         --main-height: 20px + 3 * 0.89em + 20px + 1em;
         --bio-top-padding: 90px;
       }
@@ -206,7 +202,7 @@
 
     <script>
       (function() {
-        // if firefox 3.5+, hide content till load (or 3 seconds) to prevent FOUT
+        // if firefox 3.5+, hide content till load (or 2 seconds) to prevent FOUT
         var d = document,
           e = d.documentElement,
           s = d.createElement('style');
@@ -219,7 +215,7 @@
             s.parentNode && s.parentNode.removeChild(s);
           }
           addEventListener('load', f, false);
-          setTimeout(f, 3000);
+          setTimeout(f, 2000);
         }
       })();
     </script>
@@ -242,24 +238,24 @@
       <nav class="social">
         <ul class="icon-ul horizontal">
           <li>
-            <a href="https://github.com/nicolalamacchia" title="GitHub"
-              ><i class="fab fa-github-square fa-3x"></i
-            ></a>
+            <a href="https://github.com/nicolalamacchia" title="GitHub">
+              <i class="fab fa-github-square fa-3x"></i>
+            </a>
           </li>
           <li>
-            <a href="https://twitter.com/nicolalamacchia" title="Twitter"
-              ><i class="fab fa-twitter-square fa-3x"></i
-            ></a>
+            <a href="https://twitter.com/nicolalamacchia" title="Twitter">
+              <i class="fab fa-twitter-square fa-3x"></i>
+            </a>
           </li>
           <li>
-            <a href="https://flickr.com/photos/nicolalamacchia" title="Flickr"
-              ><i class="fab fa-flickr fa-3x"></i
-            ></a>
+            <a href="https://flickr.com/photos/nicolalamacchia" title="Flickr">
+              <i class="fab fa-flickr fa-3x"></i>
+            </a>
           </li>
           <li>
-            <a href="https://it.linkedin.com/in/nlamacchia" title="LinkedIn"
-              ><i class="fab fa-linkedin fa-3x"></i
-            ></a>
+            <a href="https://it.linkedin.com/in/nlamacchia" title="LinkedIn">
+              <i class="fab fa-linkedin fa-3x"></i>
+            </a>
           </li>
         </ul>
       </nav>
