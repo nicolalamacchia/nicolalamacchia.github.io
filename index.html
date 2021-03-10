@@ -292,6 +292,14 @@
     </section>
 
     <script>
+      var greetingsStyle = 'font-weight: bold; background: #c1a; color: #fb1;';
+      var emailStyle = 'font-weight: bold; background: #fb1; color: #c1a;';
+      var domainStyle = 'font-style: italic;'
+      console.group('%c Greetings! ', greetingsStyle);
+        console.log('If you want to say hi, contact me at: %c hello %c @ this domain ', emailStyle, domainStyle);
+        console.log('If you think you might want me as a colleague, contact me at: %c hire %c @ this domain ', emailStyle, domainStyle);
+      console.groupEnd();
+
       document.querySelectorAll('[data-link]').forEach(function(el) {
         var href = el.getAttribute('href');
         el.setAttribute('href', href.replace('/', '#'));
