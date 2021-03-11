@@ -1,202 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv=content-type content="text/html; charset=utf-8">
-        <meta name=viewport content="width=device-width, initial-scale=1.0">
-        <meta name=description content="Fork Nicola Lamacchia on GitHub. Follow Nicola Lamacchia on Twitter. Add Nicola Lamacchia to your network on LinkedIn. Join Nicola Lamacchia on Flickr.">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fork Nicola Lamacchia on GitHub. Follow Nicola Lamacchia on Twitter. Add Nicola Lamacchia to your network on LinkedIn. Join Nicola Lamacchia on Flickr."
+    />
 
-        <title>Nicola Lamacchia - Bio</title>
+    <title>Nicola Lamacchia - Bio</title>
 
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/fontawesome.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/brands.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
-        <link href="https://fontlibrary.org/face/dejavu-sans-mono" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/fontawesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/brands.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fontlibrary.org/face/dejavu-sans-mono"
+      rel="stylesheet"
+    />
 
-        <style>
-            :root {
-                /* solarized dark */
-                --dark0: #002b36;
-                --dark1: #073642;
-                --dark2: #586e75;
-                --darkgrey: #657b83;
-                --lightgray: #839496;
-                --light2: #93a1a1;
-                --light0: #fdf6e3;
-                --border-color: #2aa198;
-                /* gruvbox dark */
-                /*
-                --dark0: #1d2021;
-                --dark1: #282828;
-                --dark2: #32302f;
-                --darkgrey: #7c6f64;
-                --lightgray: #a89984;
-                --light2: #f2e5bc;
-                --light0: #f9f5d7;
-                --border-color: #fbf1c7;
-                */
-                --body-font: Karla, sans-serif;
-                --heading-font: "Open Sans Condensed", sans-serif;
-                --monospace-font: "DejaVu Sans Mono", monospace;
-            }
-            * {
-                box-sizing: border-box;
-            }
-            body, html {
-                background-color: var(--dark0);
-                color: var(--lightgray);
-                font: 18px/1 var(--body-font);
-                height: 100%;
-                margin: 0;
-                overflow: hidden;
-                padding: 0;
-                width: 100%;
-            }
-            ul {
-                margin: 0;
-                padding: 0;
-            }
-            .horizontal li {
-                display: inline;
-                margin-right: 15px;
-            }
-            li {
-                margin: 30px auto;
-            }
-            li:last-child {
-                margin-right: 0;
-            }
-            a:link, a:visited {
-                text-decoration: none;
-                color: inherit;
-            }
-            a:hover, a:active {
-                color: var(--dark2);
-            }
-            code {
-                font-family: var(--monospace-font);
-                font-size: 0.875em;
-            }
-            h1, h2, h3, h4, h5, h6 {
-                font-family: var(--heading-font);
-            }
-            h1, h2, h3, h4, h5, h6,
-            strong, b {
-                color: var(--light2);
-            }
-            main {
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-                justify-content: center;
-                line-height: 1;
-            }
-            header {
-                margin-bottom: 20px;
-                z-index: 1;
-            }
-            picture img {
-                border-radius: 50%;
-                box-shadow: 0 0 3px 2px var(--border-color);
-                height: 150px;
-                user-drag: none;
-                user-select: none;
-                -webkit-user-drag: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                -webkit-user-select: none;
-                /* pointer-events: none; */
-            }
-            footer {
-                margin-top: 20px;
-            }
-            .social {
-                font-size: 0.89em;
-                /* fill space in case FontAwesome does not load correctly */
-                height: 3em;
-            }
-            .bio {
-                background-color: var(--dark1);
-                box-shadow: 0 0 2px 1px var(--border-color);
-                display: flex;
-                flex: 1;
-                font-family: var(--body-font), sans-serif;
-                height: calc(50% + (20px + 3*.89em + 20px + 1em)/2);
-                justify-content: center;
-                opacity: 0;
-                padding: 90px 20px 0;
-                position: absolute;
-                top: calc(50% - (20px + 3*.89em + 20px + 1em)/2);
-                transform: translateY(100%);
-                transition: transform .15s ease-out, opacity .15s linear;
-                width: 100%;
-            }
-            .bio :last-child {
-                margin-bottom: 20px;
-            }
-            .bio.visible {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            .bio__close {
-                font-size: 1.667em;
-                position: absolute;
-                right: 15px;
-                top: 15px;
-            }
-            .bio__container {
-                max-width: 640px;
-                min-width: 320px;
-                overflow-y: auto;
-            }
-            p {
-                line-height: 1.5;
-            }
-            [data-link] {
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <header>
-                <picture>
-                    <source srcset="/assets/img/me600.jpeg 4x, /assets/img/me450.jpeg 3x, /assets/img/me300.jpeg 2x, /assets/img/me150.jpeg 1x">
-                    <img src="/assets/img/me150.jpeg" alt="Nicola Lamacchia">
-                </picture>
-            </header>
-            <nav class="social">
-                <ul class="icon-ul horizontal">
-                    <li><a href=https://github.com/nicolalamacchia title=GitHub><i class="fab fa-github-square fa-3x"></i></a></li>
-                    <li><a href=https://twitter.com/nicolalamacchia title=Twitter><i class="fab fa-twitter-square fa-3x"></i></a></li>
-                    <li><a href=https://flickr.com/photos/nicolalamacchia title=Flickr><i class="fab fa-flickr fa-3x"></i></a></li>
-                    <li><a href=https://it.linkedin.com/in/nlamacchia title=LinkedIn><i class="fab fa-linkedin fa-3x"></i></a></li>
-                </ul>
-            </nav>
-            <footer>
-                <nav>
-                    <ul class="horizontal">
-                        <li><a href="/cv">résumé</a></li>
-                        <li>-</li>
-                        <li><a href="/bio" data-link="open-bio">about me</a></li>
-                    </ul>
-                </nav>
-            </footer>
-        </main>
+    <style>
+      :root {
+        /* solarized dark */
+        --dark0: #002b36;
+        --dark1: #073642;
+        --dark2: #586e75;
+        --darkgrey: #657b83;
+        --lightgray: #839496;
+        --light2: #93a1a1;
+        --light0: #fdf6e3;
+        --border-color: #2aa198;
+        --body-font: Karla, sans-serif;
+        --heading-font: 'Open Sans Condensed', sans-serif;
+        --monospace-font: 'DejaVu Sans Mono', monospace;
+        --icon-size: 1.78em;
+        --icon-line-height: 2.67em;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        background-color: var(--dark0);
+        color: var(--lightgray);
+        font: 18px/1 var(--body-font);
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      .horizontal li {
+        display: inline;
+        margin-right: 15px;
+      }
+      li {
+        margin: 30px auto;
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+      a:hover,
+      a:active {
+        color: var(--dark2);
+      }
+      code {
+        font-family: var(--monospace-font);
+        font-size: 0.875em;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--heading-font);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      strong,
+      b {
+        color: var(--light2);
+      }
+      main {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        line-height: 1;
+      }
+      header {
+        /* normal margin-bottom - box-shadow + footer margin-top + social size + footer font-size */
+        margin-bottom: calc(20px - 2px + 20px + var(--icon-line-height) + 1em);
+        z-index: 1;
+      }
+      picture img {
+        border-radius: 50%;
+        box-shadow: 0 0 3px 2px var(--border-color);
+        height: 150px;
+        user-drag: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        /* pointer-events: none; */
+      }
+      .bio {
+        background-color: var(--dark1);
+        box-shadow: 0 0 2px 1px var(--border-color);
+        display: flex;
+        flex: 1;
+        font-family: var(--body-font), sans-serif;
+        height: calc(50% + (20px + 3 * 0.89em + 20px + 1em) / 2);
+        justify-content: center;
+        opacity: 0;
+        padding: 90px 20px 0;
+        position: absolute;
+        top: calc(50% - (20px + 3 * 0.89em + 20px + 1em) / 2);
+        transform: translateY(100%);
+        transition: transform 0.15s ease-out, opacity 0.15s linear;
+        width: 100%;
+      }
+      .bio :last-child {
+        margin-bottom: 20px;
+      }
+      .bio.visible {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      .bio__close {
+        font-size: 1.667em;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
+      .bio__container {
+        max-width: 640px;
+        min-width: 320px;
+        overflow-y: auto;
+      }
+      p {
+        line-height: 1.5;
+      }
+      [data-link] {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <picture>
+          <source
+            srcset="
+              /assets/img/me600.jpeg 4x,
+              /assets/img/me450.jpeg 3x,
+              /assets/img/me300.jpeg 2x,
+              /assets/img/me150.jpeg 1x
+            "
+          />
+          <img src="/assets/img/me150.jpeg" alt="Nicola Lamacchia" />
+        </picture>
+      </header>
+    </main>
 
-        <section class="bio visible">
-            <a href="/" class="bio__close">&times;</a>
-            <div class="bio__container">
-                <h1>Hello</h1>
-                <p>My name is <strong>Nicola Lamacchia</strong> (pronounced <code>/niˈkɔːlɑ laˈmak.kja/</code>).</p>
-                <p>I was born in 1988 in northern Apulia, Italy.</p>
-                <p>I'm a <strong>software engineer</strong> living in Lombardy, Italy.</p>
-                <p>In my spare time I patch buggy GNU/Linux applications, fix broken hardware, design broken hardware, try to receive shortwave radio communications and take photographs, mostly on black and white films, which I develop in my bathroom.</p>
-            </div>
-        </section>
-    </body>
+    <section class="bio visible">
+      <a href="/" class="bio__close">&times;</a>
+      <div class="bio__container">
+        <h1>Hello</h1>
+        <p>
+          My name is <strong>Nicola Lamacchia</strong> (pronounced
+          <code>/niˈkɔːlɑ laˈmak.kja/</code>).
+        </p>
+        <p>I was born in 1988 in northern Apulia, Italy.</p>
+        <p>
+          I'm a <strong>software engineer</strong> living in Lombardy, Italy.
+        </p>
+        <p>
+          In my spare time I patch buggy GNU/Linux applications, fix broken
+          hardware, design broken hardware, try to receive shortwave radio
+          communications and take photographs, mostly on black and white films,
+          which I develop in my bathroom.
+        </p>
+      </div>
+    </section>
+  </body>
 </html>
-
