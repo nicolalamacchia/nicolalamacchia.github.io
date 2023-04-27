@@ -123,13 +123,11 @@
         border-radius: 50%;
         box-shadow: 0 0 3px 2px var(--border-color);
         height: 150px;
-        user-drag: none;
         user-select: none;
         -webkit-user-drag: none;
         -moz-user-select: none;
         -ms-user-select: none;
         -webkit-user-select: none;
-        /* pointer-events: none; */
       }
       footer {
         margin-top: 20px;
@@ -205,8 +203,35 @@
         body {
           font-size: 16px;
         }
+        main {
+          margin-top: -50px;
+        }
+        .bio {
+          top: calc(50vh - (var(--main-height)) / 2 - 50px);
+        }
         .bio__close {
           font-size: 40px;
+        }
+      }
+      @media (max-height: 300px) {
+        main {
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+        .bio {
+          top: 0;
+          z-index: 2;
+          height: 100vh;
+          padding: 10px;
+        }
+        .bio__container {
+          height: 100%;
+        }
+        header {
+          margin-bottom: 0;
+        }
+        footer {
+          margin-top: 0;
         }
       }
     </style>
@@ -281,7 +306,7 @@
       <footer>
         <nav>
           <ul class="horizontal">
-            <li><a href="https://nicola.link/cv">résumé</a></li>
+            <li><a href="https://nicola.dev/cv">résumé</a></li>
             <li>-</li>
             <li><a href="/bio" data-link="open-bio">about me</a></li>
           </ul>
